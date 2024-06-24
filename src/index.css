@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,13 +18,9 @@ html {
   font-size: 62.5%;
 }
 
-/*? base style */
-
+/* Base styles */
 body {
   margin: 0;
-  display: flex;
-  place-items: center; 
-  min-width: 32rem; 
   min-height: 100vh;
 }
 
@@ -33,11 +30,7 @@ h1 {
   font-weight: bold;
 }
 
-p,
-li,
-label,
-input,
-textarea {
+p, li, label, input, textarea {
   font-size: 1.8rem;
   line-height: 1.56;
   letter-spacing: 0.1rem;
@@ -61,11 +54,10 @@ li {
   font-size: 1.8rem !important;
 }
 
-/*? layout Rule  */
-
+/* Layout styles */
 .container {
   max-width: 140rem;
-  padding: 4rem 2rem;
+  padding: 4.4rem 2.8rem;
   margin: 0 auto;
 }
 
@@ -82,7 +74,7 @@ li {
   grid-template-columns: repeat(4, 1fr);
 }
 
-button{
+button {
   text-transform: capitalize;
   padding: 0.8rem 1.6rem;
   font-size: 1.6rem;
@@ -105,154 +97,156 @@ button:hover {
   box-shadow: inset 0 0 0 0.2rem var(--bg-color);
 }
 
-.section-home .grid {
-  align-items: center;
+.section-home {
+  & .grid {
+    align-items: center;
+  }
 }
 
-.home-content p {
-  margin: 2rem 0 4rem 0;
-}
+.home-content {
+  p {
+    margin: 2rem 0 4rem 0;
 
-.home-content p:first-child {
-  margin: 0 0 0.8rem 0;
-}
+    &:first-child {
+      margin: 0 0 0.8rem 0;
+    }
+  }
 
-.home-content .home-image {
-  display: flex;
-  justify-content: center;
-}
-
-.home-content .home-image img {
-  width: 70%;
-  height: auto;
+  .home-image {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 70%;
+      height: auto;
+    }
+  }
 }
 
 /***** Analytical Section Start ****/
 .analytical-section {
   margin: 8.8rem 0;
-}
 
-.analytical-section .container {
-  background-color: var(--bg-color);
-  border-radius: 1.4rem;
-}
+  & .container {
+    background-color: var(--bg-color);
+    border-radius: 1.4rem;
+  }
+  & .grid {
+    color: var(--dark-color);
+    & .div1 {
+      text-align: center;
+      border-right: 0.2rem solid var(--dark-color);
 
-.analytical-section .grid {
-  color: var(--dark-color);
-}
+      &:last-child {
+        border: none;
+      }
 
-.analytical-section .grid .div1 {
-  text-align: center;
-  border-right: 0.2rem solid var(--dark-color);
-}
-
-.analytical-section .grid .div1:last-child {
-  border: none;
-}
-
-.analytical-section .grid .div1 h2 {
-  font-size: 4rem;
+      & h2 {
+        font-size: 4rem;
+      }
+    }
+  }
 }
 
 /***** Analytical Section End ****/
 
 /****About Page Starts ***/
-.about-content p {
-  margin: 2.4rem 0 4rem 0;
-}
-
-.about-content p:first-child {
-  margin: 0 0 0.8rem 0;
+.about-content {
+  p {
+    margin: 2.4rem 0 4rem 0;
+    &:first-child {
+      margin: 0 0 0.8rem 0;
+    }
+  }
 }
 
 .about-image {
   display: flex;
   justify-content: center;
+  & img {
+    width: 70%;
+    height: auto;
+  }
 }
 
-.about-image img {
-  width: 70%;
-  height: auto;
-}
-
-.section-about .grid {
-  align-items: center;
+.section-about {
+  & .grid {
+    align-items: center;
+  }
 }
 
 /***About Page Ends ***/
 
 /*** Contact Section starts ***/
-.section-contact .section-content {
-  padding: 0;
-}
+.section-contact {
+  & .section-content {
+    padding: 0;
+    & h1 {
+      margin-bottom: 2.8rem;
+    }
+  }
 
-.section-contact .section-content h1 {
-  margin-bottom: 2.8rem;
-}
-
-.section-contact .container {
-  padding-top: 2.8rem;
+  & .container {
+    padding-top: 2.8rem;
+  }
 }
 
 .contact-img {
   display: flex;
   justify-content: center;
   align-items: center;
+  & img {
+    width: 80%;
+    height: auto;
+  }
 }
 
-.contact-img img {
-  width: 80%;
-  height: auto;
-}
-
-.section-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-}
-
-.section-form label {
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.section-form input,
-.section-form textarea {
-  width: 80%;
-  padding: 0.2rem 0 0.6rem;
+.section-form {
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  & label {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  & input, textarea {
+    width: 80%;
+    padding: 0.2rem 0 0.6rem;
+  }
 }
 
 /*** contact section ends ***/
-.registeration-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
+.registeration-form {
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  & label {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  & input {
+    width: 80%;
+    padding: 0.2rem 0 0.6rem;
+  }
 }
 
-.registeration-form label {
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.registeration-form input {
-  width: 80%;
-  padding: 0.2rem 0 0.6rem;
-}
-
-.login-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-}
-
-.login-form label {
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.login-form input {
-  width: 70%;
-  padding: 0.2rem 0 0.6rem;
+.login-form {
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  & label {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  & input {
+    width: 70%;
+    padding: 0.2rem 0 0.6rem;
+  }
 }
 
 /*** Error page starts ***/
@@ -261,7 +255,6 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
-
 .error-page .content {
   max-width: 70rem;
   text-align: center;
@@ -306,7 +299,6 @@ button:hover {
     background-position: 0% 0%;
   }
 }
-
 .content h4 {
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -325,7 +317,6 @@ button:hover {
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
-
 .content .btns a:hover {
   background: var(--btn-color);
   color: #fff;
@@ -334,6 +325,7 @@ button:hover {
 /*** Error page ends ***/
 
 /*** services page starts ***/
+
 .main-heading {
   text-align: center;
   margin-bottom: 40px;
@@ -369,11 +361,10 @@ button:hover {
 
 .card-details {
   padding: 20px;
-}
-
-.card-details .grid {
-  display: flex;
-  justify-content: space-between;
+  & .grid {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .provider {
@@ -385,7 +376,7 @@ button:hover {
 .price {
   font-weight: bold;
   font-size: small;
-  color: #007bff; 
+  color: #007bff;
 }
 
 .service {
@@ -490,15 +481,22 @@ button:hover {
   color: #888;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 1200px) {
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  p, li, label, input, textarea {
+    font-size: 1.6rem;
+  }
+
   .container {
-    max-width: 100%;
-    padding: 2rem;
+    padding: 2.2rem 1.4rem;
   }
 
   .grid {
-    gap: 3rem;
+    gap: 3.4rem;
   }
 
   .grid-two-cols {
@@ -509,110 +507,69 @@ button:hover {
     grid-template-columns: 1fr;
   }
 
-  .analytical-section .grid .div1 {
-    border-right: none;
-    border-bottom: 0.2rem solid var(--dark-color);
+  .home-content .home-image img {
+    width: 90%;
   }
 
-  .analytical-section .grid .div1:last-child {
-    border: none;
+  .about-image img {
+    width: 90%;
   }
 
-  .about-image img, .contact-img img {
+  .contact-img img {
+    width: 90%;
+  }
+
+  .section-form input, .section-form textarea,
+  .registeration-form input,
+  .login-form input {
     width: 100%;
   }
 
-  .section-form input, .section-form textarea, .registeration-form input, .login-form input {
-    width: 100%;
-  }
-
-  .content h2.header {
-    font-size: 10vw;
+  .error-page .content h2.header {
+    font-size: 14vw;
   }
 
   .main-heading {
     font-size: 4rem;
   }
-}
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 4rem;
-  }
-
-  p,
-  li,
-  label,
-  input,
-  textarea {
-    font-size: 1.6rem;
-  }
-
-  a {
-    font-size: 1.6rem;
-  }
-
-  button {
-    font-size: 1.4rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  .grid {
-    gap: 2rem;
-  }
-
-  .grid-two-cols, .grid-four-cols {
-    grid-template-columns: 1fr;
-  }
-
-  .about-image img, .contact-img img {
-    width: 90%;
-  }
-
-  .section-form input, .section-form textarea, .registeration-form input, .login-form input {
-    width: 90%;
-  }
-
-  .main-heading {
-    font-size: 3rem;
+  .card-details {
+    padding: 15px;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
-  p,
-  li,
-  label,
-  input,
-  textarea {
+  p, li, label, input, textarea {
     font-size: 1.4rem;
   }
 
-  a {
-    font-size: 1.4rem;
-  }
-
-  button {
-    font-size: 1.2rem;
-    padding: 0.4rem 1rem;
+  .container {
+    padding: 1.1rem 0.7rem;
   }
 
   .grid {
-    gap: 1.5rem;
+    gap: 1.7rem;
   }
 
-  .about-image img, .contact-img img {
+  .home-content .home-image img,
+  .about-image img,
+  .contact-img img {
     width: 100%;
   }
 
-  .section-form input, .section-form textarea, .registeration-form input, .login-form input {
-    width: 100%;
+  .error-page .content h2.header {
+    font-size: 10vw;
   }
 
   .main-heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+
+  .card-details {
+    padding: 10px;
   }
 }

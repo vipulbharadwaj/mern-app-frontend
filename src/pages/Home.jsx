@@ -48,7 +48,7 @@ export const Home = ()=>{
 <section className="section-home">
             <div className="container grid grid-two-cols">
                 <div className="home-image">
-                    <img src="/images/home2.png" alt="home-logo" width="500px" height="500px" />
+                    <img src="/images/home2.webp" alt="home-logo" width="500px" height="500px" />
                 </div>
                 <div className="home-content">
                     <p>Welcome to the world's best technical company</p>
