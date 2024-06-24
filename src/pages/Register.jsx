@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { useAuth } from "../store/auth";
+import { toast } from "react-toastify";
 export const Register = ()=>{
 
     const [formData, setformData] = useState({
